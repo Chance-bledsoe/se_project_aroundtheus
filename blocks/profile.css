@@ -40,6 +40,7 @@
 }
 
 .profile__edit-button {
+  display: flex;
   background: transparent url(../images/edit-icon.svg) center no-repeat;
   height: 24px;
   width: 24px;
@@ -92,8 +93,8 @@
     font-size: 22px;
     line-height: 27px;
     max-width: 196px;
-    padding-top: 26px;
     text-align: center;
+    margin: 0;
   }
 
   .profile__description {
@@ -121,6 +122,7 @@
 
   .profile__image {
     margin: 0;
+    margin-bottom: 30px;
   }
 
   .profile__description {
@@ -131,15 +133,18 @@
     font-size: 14px;
     padding-bottom: 36px;
     padding-left: 0;
+    padding-right: 0;
   }
 
   .profile__edit-button {
     height: 18px;
     width: 18px;
-    position: absolute;
     background-size: 7.5px 7.5px;
-    padding-top: 29px;
     padding-right: 10px;
+    display: flex;
+    align-self: flex-end;
+    margin-left: 0;
+    margin-bottom: 7px;
   }
 
   .profile__add-button {
