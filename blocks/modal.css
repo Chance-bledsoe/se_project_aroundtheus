@@ -8,17 +8,14 @@
   z-index: 999;
   display: flex;
   padding: 0 19px;
-  /*
   visibility: hidden;
-    */
 }
 
-/*
 .modal_opened {
   display: flex;
   visibility: visible;
 }
-*/
+
 .modal__container {
   background-color: #fff;
   margin: auto;
@@ -106,7 +103,7 @@
   .modal__container {
     max-width: calc(100% - 19px * 2);
     height: 322px;
-    margin-top: 123px 19px;
+
     padding: 25px 22px;
   }
   .modal__input {
