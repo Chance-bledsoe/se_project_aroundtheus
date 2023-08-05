@@ -1,0 +1,133 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: flex;
+  padding: 0 19px;
+  /*
+  visibility: hidden;
+    */
+}
+
+/*
+.modal_opened {
+  display: flex;
+  visibility: visible;
+}
+*/
+.modal__container {
+  background-color: #fff;
+  margin: auto;
+  padding: 36px;
+  border-radius: 10px;
+  position: relative;
+  max-width: 430px;
+
+  width: 358px;
+}
+
+.modal__close {
+  background-image: url(../images/modal-Close-Icon.svg);
+  border: none;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  bottom: calc(100% + 5px);
+  left: calc(100% + 5px);
+  cursor: pointer;
+}
+
+.modal__close:hover {
+  transition: linear 0.1s;
+  opacity: 0.5;
+}
+
+.modal__heading {
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 29px;
+  color: #000;
+  margin: 0 0 24px;
+}
+
+.modal__form {
+  width: 358px;
+  display: flex;
+  align-items: center;
+  row-gap: 8px;
+  flex-direction: column;
+}
+
+.modal__input {
+  width: 100%;
+  height: 50px;
+  border-radius: 1px;
+  background-color: transparent;
+  border: none;
+  color: #000000;
+  border-bottom-style: solid;
+  border-color: rgba(0, 0, 0, 0.2);
+  border-width: 1px;
+  font-family: "Inter", Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 17px;
+  text-align: left;
+}
+
+.modal__button {
+  width: 100%;
+  height: 50px;
+  margin-top: 48px;
+  border-radius: 2px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  font-family: "Inter", Arial, "Times New Roman";
+  font-size: 18px;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.modal__button:hover {
+  transition: linear 0.1s;
+  opacity: 0.5;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .modal__container {
+    max-width: calc(100% - 19px * 2);
+    height: 322px;
+    margin-top: 123px 19px;
+    padding: 25px 22px;
+  }
+  .modal__input {
+    max-width: 238px;
+  }
+  .modal__button {
+    max-width: 238px;
+    height: 46px;
+  }
+  .modal__close {
+    height: 26px;
+    width: 26px;
+    bottom: calc(100% + 10px);
+    left: calc(100% - 33px);
+  }
+  .modal__form {
+    margin: 25px 22px;
+    max-width: 238px;
+    margin-bottom: 45px;
+  }
+  .modal__heading {
+    margin-left: 22px;
+  }
+}
