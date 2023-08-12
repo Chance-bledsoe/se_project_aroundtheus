@@ -40,7 +40,7 @@
 
 .modal__close:hover {
   transition: linear 0.1s;
-  opacity: 0.8;
+  opacity: 80%;
 }
 
 .modal__heading {
@@ -98,15 +98,23 @@
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .modal__container {
     width: 282px;
-    height: 322px;
-    top: 123px;
-    left: 19px;
-    border: 1px;
+    margin-top: 122px;
   }
-  
+
+  .modal__heading {
+    font-size: 18px;
+    line-height: 22px;
+  }
+
+  .modal__button{
+    line-height: 17px;
+    font-size: 14px;
+  }
+
   .modal__close {
     height: 26px;
     width: 26px;
     bottom: calc(100% + 10px);
     left: calc(100% - 33px);
   }
+}
