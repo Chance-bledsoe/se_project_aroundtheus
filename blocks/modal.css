@@ -49,7 +49,7 @@
   font-weight: 900;
   line-height: 29px;
   color: #000;
-  margin: 0 0 24px;
+  margin: 0 0 54px;
 }
 
 .modal__form {
@@ -61,8 +61,9 @@
 
 .modal__input {
   width: 100%;
-  height: 50px;
   border-radius: 1px;
+  margin-bottom: 30px;
+  padding-bottom: 13px;
   background-color: transparent;
   border: none;
   color: #000000;
@@ -74,12 +75,13 @@
   font-weight: 400;
   line-height: 17px;
   text-align: left;
+  
 }
 
 .modal__button {
   width: 100%;
   height: 50px;
-  margin-top: 48px;
+  margin-top: 18px;
   border-radius: 2px;
   background-color: #000;
   color: #fff;
@@ -98,11 +100,10 @@
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .modal__container {
     width: 282px;
-    height: 322px;
     padding-left: 22px;
     padding-right: 22px;
     padding-top: 25px;
-    
+    padding-bottom: 25px;
   }
 
   .modal__heading {
@@ -114,19 +115,20 @@
 
   .modal__input {
     width: 238px;
+    padding-bottom: 13px;
+    gap: 30px;
   }
 
   .modal__input::placeholder {
     font-size: 14px;
     line-height: 17px;
-    margin-bottom: 13px;
   }
 
 
   .modal__button{
     line-height: 17px;
     font-size: 14px;
-    margin-top:45px;
+    margin-top:15px;
     width: 238px;
     height: 46px;
     margin-bottom: 0;
@@ -135,7 +137,7 @@
   .modal__close {
     height: 26px;
     width: 26px;
-    bottom: calc(100% + 10px);
+    bottom: calc(100% + 13px);
     left: calc(100% - 33px);
   }
 }
