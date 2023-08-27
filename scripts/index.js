@@ -46,7 +46,6 @@ const profileEditFormElement = profileEditModal.querySelector(".modal__form");
 const addCardFormElement = addCardModal.querySelector(".modal__form");
 const cardsListEl = document.querySelector(".cards__list");
 const cardTemplate = document.querySelector("#card-template").content;
-
 const cardTitleInput = addCardFormElement.querySelector(".modal__input_type_title");
 const cardLinkInput = addCardFormElement.querySelector(".modal__input_type_link");
 
@@ -60,7 +59,6 @@ function handleProfileFormSubmit(evt) {
 function closePopup(evt) {
   profileEditModal.classList.remove("modal_opened");
 }
-
 
 function handleAddCardFormSubmit(evt) {
   evt.preventDefault();
@@ -83,6 +81,23 @@ function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardTitleEl = cardElement.querySelector(".card__image-title");
+  const likeButton = cardElement.querySelector(".card__like-button");
+  const deleteButton = cardElement.querySelector(".card__delete-button");
+  // deleteButton.addEventListener("click", () => {
+    //cardElement.remove("");
+
+  // find the delete button
+
+  // add event listener to the delete button
+    // cardElement.remove();
+
+
+    // add click listner to the cardImageEl
+        // openModal with previewImageModal
+    
+  likeButton.addEventListener("click", () => {
+    likeButton.classList.toggle("card__like-button_active");
+  });
 
   cardImageEl.src = cardData.link;
   cardImageEl.alt = cardData.name;
