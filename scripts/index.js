@@ -50,7 +50,6 @@ const cardTitleInput = addCardFormElement.querySelector(".modal__input_type_titl
 const cardLinkInput = addCardFormElement.querySelector(".modal__input_type_link");
 
 const imageModal = document.querySelector("#image-Modal");
-const modalImage = imageModal.querySelector("modal-image");
 const modalImageTitle = imageModal.querySelector(".modal__image-title");
 const modalCloseButton = imageModal.querySelector(".modal__close-button");
 function handleProfileFormSubmit(evt) {
