@@ -5,6 +5,7 @@
   list-style: none;
   border-radius: 10px;
   position: relative;
+  cursor: pointer;
 }
 
 .card__image {
