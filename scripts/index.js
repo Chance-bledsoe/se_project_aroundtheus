@@ -50,8 +50,10 @@ const cardTitleInput = addCardFormElement.querySelector(".modal__input_type_titl
 const cardLinkInput = addCardFormElement.querySelector(".modal__input_type_link");
 
 const imageModal = document.querySelector("#image-modal");
+const imageModalImage = imageModal.querySelector("#modalImage");
 const modalImageTitle = imageModal.querySelector(".modal__image-title");
-const modalCloseButton = imageModal.querySelector(".modal__close-button");
+const modalCloseButton = imageModal.querySelector(".modal__close");
+
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   profileTitle.textContent = profileTitleInput.value;
@@ -99,12 +101,15 @@ function getCardElement(cardData) {
   });
 
   cardImageEl.addEventListener("click", () => {
-    imageModal.setAttribute("src", `${cardData.link}`);
-    imageModal.setAttribute("alt", `${cardData.name}`);
+    imageModalImage.setAttribute("src", `${cardData.link}`);
+    imageModalImage.setAttribute("alt", `${cardData.name}`);
     modalImageTitle.textContent = cardData.name;
     imageModal.classList.add("modal_opened");
   });
 
+  modalCloseButton.addEventListener("click", () => {
+    imageModal.classList.remove("modal_opened");
+  });
 
   cardImageEl.src = cardData.link;
   cardImageEl.alt = cardData.name;
