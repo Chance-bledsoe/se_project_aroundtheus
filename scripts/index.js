@@ -49,7 +49,7 @@ const cardTemplate = document.querySelector("#card-template").content.querySelec
 const cardTitleInput = addCardFormElement.querySelector(".modal__input_type_title");
 const cardLinkInput = addCardFormElement.querySelector(".modal__input_type_link");
 
-const imageModal = document.querySelector("#image-Modal");
+const imageModal = document.querySelector("#image-modal");
 const modalImageTitle = imageModal.querySelector(".modal__image-title");
 const modalCloseButton = imageModal.querySelector(".modal__close-button");
 function handleProfileFormSubmit(evt) {
@@ -99,10 +99,10 @@ function getCardElement(cardData) {
   });
 
   cardImageEl.addEventListener("click", () => {
-    openModal(imageModal);
-    modalImage.setAttribute("src", `${cardData.link}`);
-    modalImage.setAttribute("alt", `${cardData.name}`);
+    imageModal.setAttribute("src", `${cardData.link}`);
+    imageModal.setAttribute("alt", `${cardData.name}`);
     modalImageTitle.textContent = cardData.name;
+    imageModal.classList.add("modal_opened");
   });
 
 
@@ -137,9 +137,3 @@ addCardCloseModal.addEventListener("click", () => {
   addCardModal.classList.remove("modal_opened");
 } );
 
-cardElementImage.addEventListener("click", () => {
-  modalImage.setAttribute("src", `${cardData.link}`);
-  modalImage.setAttribute("alt", `${cardData.name}`);
-  modalImageTitle.textContent = cardData.name;
-  openModal(imageModal);
-});
