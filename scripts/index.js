@@ -34,8 +34,8 @@ const profileEditButton = document.querySelector("#profile-edit-button");
 const profileEditModal = document.querySelector("#profile-edit-modal");
 const addNewCardButton = document.querySelector("#add-card-button");
 const addCardModal = document.querySelector("#add-card-modal");
-const profileCloseModal = profileEditModal.querySelector("#profile-close-modal");
-const addCardCloseModal = addCardModal.querySelector("#card-close-modal");
+const profileEditCloseButton = profileEditModal.querySelector("#profile-close-modal");
+const addCardCloseButton = addCardModal.querySelector("#card-close-modal");
 const profileTitle = document.querySelector(".profile__title");
 const profileDescription = document.querySelector(".profile__description");
 const profileTitleInput = document.querySelector("#profile-title-input");
@@ -52,7 +52,7 @@ const cardLinkInput = addCardFormElement.querySelector(".modal__input_type_link"
 const imageModal = document.querySelector("#image-modal");
 const imageModalImage = imageModal.querySelector("#modalImage");
 const modalImageTitle = imageModal.querySelector(".modal__image-title");
-const modalCloseButton = imageModal.querySelector(".modal__close");
+const imageModalCloseButton = imageModal.querySelector(".modal__close");
 
 function openPopup(modal) {
   modal.classList.add("modal_opened");
@@ -87,14 +87,14 @@ function getCardElement(cardData) {
   const cardElement = cardTemplate.cloneNode(true);
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardTitleEl = cardElement.querySelector(".card__image-title");
-  const likeButton = cardElement.querySelector(".card__like-button");
+  const cardLikeButton = cardElement.querySelector(".card__like-button");
     
-  likeButton.addEventListener("click", () => {
-    likeButton.classList.toggle("card__like-button_active");
+  cardLikeButton.addEventListener("click", () => {
+    cardLikeButton.classList.toggle("card__like-button_active");
   });
 
-  const deleteButton = cardElement.querySelector(".card__delete-button");
-  deleteButton.addEventListener("click", () => {
+  const cardDeleteButton = cardElement.querySelector(".card__delete-button");
+  cardDeleteButton.addEventListener("click", () => {
     cardElement.remove();
   });
 
@@ -120,11 +120,11 @@ profileEditButton.addEventListener("click", () => {
   openPopup(profileEditModal);
 });
 
-profileCloseModal.addEventListener("click", () => {
+profileEditCloseButton.addEventListener("click", () => {
   closePopup(profileEditModal);
 });
 
-modalCloseButton.addEventListener("click", () => {
+imageModalCloseButton.addEventListener("click", () => {
   closePopup(imageModal);
 });
 
@@ -138,7 +138,7 @@ addNewCardButton.addEventListener("click", () => {
   openPopup(addCardModal);
 });
 
-addCardCloseModal.addEventListener("click", () => {
+addCardCloseButton.addEventListener("click", () => {
   closePopup(addCardModal);
 } );
 
