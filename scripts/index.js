@@ -59,10 +59,9 @@ function openPopup(modal) {
 }
 
 function closePopup(modal) {
-  if (modal) {
     modal.classList.remove("modal_opened");
-  }
 }
+
 function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   profileTitle.textContent = profileTitleInput.value;
@@ -89,9 +88,6 @@ function getCardElement(cardData) {
   const cardImageEl = cardElement.querySelector(".card__image");
   const cardTitleEl = cardElement.querySelector(".card__image-title");
   const likeButton = cardElement.querySelector(".card__like-button");
-  
-    // add click listner to the cardImageEl
-        // openModal with previewImageModal
     
   likeButton.addEventListener("click", () => {
     likeButton.classList.toggle("card__like-button_active");
