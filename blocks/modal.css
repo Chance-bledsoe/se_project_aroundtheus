@@ -66,6 +66,7 @@
   width: 100%;
   border-radius: 1px;
   padding-bottom: 13px;
+  margin-bottom: 30px;
   background-color: transparent;
   border: none;
   color: #000000;
@@ -77,7 +78,6 @@
   font-weight: 400;
   line-height: 17px;
   text-align: left;
-  
 }
 
 .modal__button {
@@ -98,7 +98,9 @@
   transition: linear 0.1s;
   opacity: 0.8;
 }
-
+.modal__button_disabled {
+ opacity: 20%;
+}
 .modal__image-container {
   margin: auto;
   position: relative;
@@ -119,6 +121,10 @@
   font-weight: 400;
 }
 
+.modal__label{
+  position: relative;
+}
+
 .modal__error {
   font-size: 12px;
   line-height: 14.5px;
@@ -126,10 +132,10 @@
   font-weight: 400;
   color: #ff0000;
   opacity: 0;
-  margin: 0;
   transition: opacity 0.3s;
   top: 5px;
-  left: 0;
+  bottom: 13px;
+  position: absolute;
 }
 
 .modal__error_visible {
@@ -139,10 +145,6 @@
 
 .modal__input_type_error {
   border-bottom: 1px solid #ff0000;
-}
-
-.modal__label {
- position: relative;
 }
 
 
