@@ -48,6 +48,7 @@ const cardsListEl = document.querySelector(".cards__list");
 const cardTemplate = document.querySelector("#card-template").content.querySelector(".card");
 const cardTitleInput = addCardFormElement.querySelector(".modal__input_type_title");
 const cardLinkInput = addCardFormElement.querySelector(".modal__input_type_link");
+const cardFormSubmitButton = addCardFormElement.querySelector(".modal__button");
 
 const imageModal = document.querySelector("#image-modal");
 const imageModalImage = imageModal.querySelector("#modalImage");
@@ -100,7 +101,7 @@ function handleAddCardFormSubmit(evt) {
   evt.target.reset();
   renderCard({ name, link }, cardsListEl);
   closePopup(addNewCardModal);
-  toggleButtonState(addNewCardButton, false, {inactiveButtonClass});
+  toggleButtonState([cardTitleInput, cardLinkInput], cardFormSubmitButton, config);
 }
 
 
