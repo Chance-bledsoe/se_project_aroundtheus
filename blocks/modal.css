@@ -52,7 +52,7 @@
   font-weight: 900;
   line-height: 29px;
   color: #000;
-  margin: 0 0 54px;
+  margin: 0 0 24px;
 }
 
 .modal__form {
@@ -124,6 +124,7 @@
 
 .modal__label{
   position: relative;
+  width: 100%;
 }
 
 .modal__error {
