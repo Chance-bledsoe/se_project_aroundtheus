@@ -82,7 +82,7 @@ function closeModalClick(evt) {
 }
 
 [profileEditModal, addNewCardModal, imageModal ].forEach((modal) => {
-  modal.addEventListener("click", closeModalClick);
+  modal.addEventListener("mousedown", closeModalClick);
 });
 
 
@@ -100,7 +100,9 @@ function handleAddCardFormSubmit(evt) {
   evt.target.reset();
   renderCard({ name, link }, cardsListEl);
   closePopup(addNewCardModal);
+  toggleButtonState(addNewCardButton, false, {inactiveButtonClass});
 }
+
 
 function renderCard(cardData, wrapper) {
   const cardElement = getCardElement(cardData);
